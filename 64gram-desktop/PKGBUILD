@@ -1,6 +1,6 @@
 # Maintainer: KspLite <ksplite@outlook.com>
 # Co-Maintainer: ous50 <ousfifty@gmail.com>
-pkgname=64gram-desktop-ous50
+pkgname=64gram-desktop-new
 pkgver=1.0.25
 pkgrel=1
 epoch=1
@@ -13,7 +13,7 @@ depends=(desktop-file-utils glib2 hicolor-icon-theme libdbus libx11)
 optdepends=('ttf-opensans: default Open Sans font family')
 conflicts=(telegram-desktop 64gram-desktop)
 provides=(64gram-desktop)
-install=64gram-desktop-new.install
+install="$pkgname.install"
 
 source=(
 	"${rawUrl}/dev/lib/xdg/telegramdesktop.desktop"

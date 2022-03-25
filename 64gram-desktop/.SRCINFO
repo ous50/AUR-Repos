@@ -1,5 +1,5 @@
-pkgbase = 64gram-desktop-ous50
-	pkgdesc = Unofficial desktop version of Telegram messaging app - packed by ous50 - added installation hints - forked from KspLite's 64gram-desktop-bin
+pkgbase = 64gram-desktop-new
+	pkgdesc = Unofficial desktop version of Telegram messaging app - binary version
 	pkgver = 1.0.25
 	pkgrel = 1
 	epoch = 1
@@ -35,4 +35,4 @@ pkgbase = 64gram-desktop-ous50
 	sha256sums = e297771c75bd2f81d637a3234f83568be62092f67d16946be23895fa92fa7119
 	sha256sums = 70ff3a826ca24f8e79c878f1abf5d08dee1fd27284ed8b7dcf6b93ac562c8d32
 
-pkgname = 64gram-desktop-ous50
+pkgname = 64gram-desktop-new
