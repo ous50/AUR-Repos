@@ -1,0 +1,133 @@
+
+function RemindRelaunchEn(){
+    echo ""
+    echo "_______________________________________________________________________"
+    echo "OwO";
+    echo "64gram desktop installed. If you have any other telegram installed"
+    echo "Just quit your telegram and relaunch it.";
+    echo "Have fun:) "
+    echo "_______________________________________________________________________"
+    echo ""
+}
+
+function RemindRelaunchZhHans(){
+    echo ""
+    echo "_______________________________________________________________________"
+    echo "OwO";
+    echo "64gram 已经安装，如果本机已经安装了其他版本的 Telegram-desktop "
+    echo "请完全退出 telegram 并重新启动";
+    echo "玩的开心：） "
+    echo "_______________________________________________________________________"
+    echo ""
+}
+
+function RemindRelaunchZhHant(){
+    echo ""
+    echo "_______________________________________________________________________"
+    echo "OwO";
+    echo "64gram 安裝完畢，如果本機已經安裝了其他版本的 Telegram-desktop "
+    echo "請完全退出 telegram 並重新啓動";
+    echo "玩的开心：） "
+    echo "_______________________________________________________________________"
+    echo ""
+}
+
+function RemindInstallDependenciesEn(){
+    echo ""
+    echo "-----------------------------------------------------------------------"
+    echo "Please install the AUR package 'noto-color-emoji-fontconfig' for proper"
+    echo "display on buttons. "
+    echo ""
+    echo "Link: https://aur.archlinux.org/packages/noto-color-emoji-fontconfig"
+    echo "-----------------------------------------------------------------------"
+    echo ""
+}
+
+function RemindInstallDependenciesZh(){
+    echo ""
+    echo "-----------------------------------------------------------------------"
+    echo "请安装 AUR 包 「noto-color-emoji-fontconfig」以让按钮正确显示。"
+    echo ""
+    echo "Link: https://aur.archlinux.org/packages/noto-color-emoji-fontconfig"
+    echo "-----------------------------------------------------------------------"
+    echo ""
+}
+
+function RemindRemoveDependenciesEn(){
+    echo ""
+    echo "_______________________________________________________________________"
+    echo "Please check if 'noto-color-emoji-fontconfig' package is only depended"
+    echo "by 64gram-desktop, if it is, just uninstall it after 64gram uninstall."
+    echo "_______________________________________________________________________"
+    echo ""
+}
+
+function RemindRemoveDependenciesZhHans(){
+    echo ""
+    echo "_______________________________________________________________________"
+    echo "请检查 'noto-color-emoji-fontconfig' 这个包是否只被 64gram-desktop 依赖"
+    echo "如果是的话 您可选择在 64gram-desktop 卸载完成后将其移除。"
+    echo "_______________________________________________________________________"
+    echo ""
+}
+
+function RemindRemoveDependenciesZhHans(){
+    echo ""
+    echo "_______________________________________________________________________"
+    echo "請檢查 'noto-color-emoji-fontconfig' 這個包是否只被 64gram-desktop 依賴"
+    echo "如果是的話 您可選擇在 64gram-desktop 卸載完成後將其移除。"
+    echo "_______________________________________________________________________"
+    echo ""
+}
+post_install() {
+    if [[ $LANG == *"en"* ]]; then
+         RemindInstallDependenciesEn
+    elif [[ $LANG == *"SG"* ]]; then
+         RemindInstallDependenciesZhHans
+    elif [[ $LANG == *"CN"* ]]; then
+         RemindInstallDependenciesZhHans
+    elif [[ $LANG == *"HK"* ]]; then
+         RemindInstallDependenciesZhHant
+    elif [[ $LANG == *"TW"* ]]; then
+         RemindInstallDependenciesZhHant
+    elif [[ $LANG == *"MO"* ]]; then
+         RemindInstallDependenciesZhHant
+    fi
+
+
+	post_upgrade
+}
+
+post_upgrade() {
+    if [[ $LANG == *"en"* ]]; then
+         RemindRelaunchEn
+    elif [[ $LANG == *"SG"* ]]; then
+         RemindRelaunchZhHans
+    elif [[ $LANG == *"CN"* ]]; then
+         RemindRelaunchZhHans
+    elif [[ $LANG == *"HK"* ]]; then
+         RemindRelaunchZhHant
+    elif [[ $LANG == *"TW"* ]]; then
+         RemindRelaunchZhHant
+    elif [[ $LANG == *"MO"* ]]; then
+         RemindRelaunchZhHant
+    fi
+
+}
+
+post_remove() {
+    if [[ $LANG == *"en"* ]]; then
+        RemindRemoveDependenciesEn
+    elif [[ $LANG == *"SG"* ]]; then
+        RemindRemoveDependenciesZhHans
+    elif [[ $LANG == *"CN"* ]]; then
+        RemindRemoveDependenciesZhHans
+    elif [[ $LANG == *"HK"* ]]; then
+        RemindRemoveDependenciesZhHant
+    elif [[ $LANG == *"TW"* ]]; then
+        RemindRemoveDependenciesZhHant
+    elif [[ $LANG == *"MO"* ]]; then
+        RemindRemoveDependenciesZhHant
+    fi
+
+}
